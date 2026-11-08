@@ -9,7 +9,7 @@ body {
 
 header {
     background-color: darkgoldenrod;
-    color: aliceblue;
+    color: #000000;
     padding: 20px;
     text-align: center;
     display: grid;
@@ -41,10 +41,15 @@ main h1 {
     justify-self: end;
 }
 nav a {
-    color: aliceblue;
+    color: #000000;
     padding: 1rem;
     text-align: right;
     text-decoration: none;
+}
+
+nav a:hover {
+    background-color: white;
+    color: darkgoldenrod;
 }
 
 .gallery {
@@ -74,7 +79,7 @@ figcaption {
 }
 
 footer {
-    color: aliceblue;
+    color: #000000;
     max-width: none;
     margin: 2rem auto 0;
     text-align: center;
