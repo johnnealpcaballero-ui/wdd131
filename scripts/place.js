@@ -6,9 +6,7 @@ document.querySelector("#lastModified").textContent = `Last Modification: ${docu
 
 function calculateWindChill(temperature, windSpeed) {
     if (temperature <= 10 && windSpeed > 4.8) {
-        return 13.12 + (0.6215 * temperature)
-        - (11.37 * Math.pow(windSpeed, 0.16))
-        + (0.3965 * temperature * Math.pow(windSpeed, 0.16));
+        return 13.12 + (0.6215 * temperature) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temperature * Math.pow(windSpeed, 0.16));
     } else {
         return "N/A"
     }
@@ -16,5 +14,11 @@ function calculateWindChill(temperature, windSpeed) {
 
 const temperature = 30;
 const windSpeed = 10;
+const windchill = document.querySelector('#windchill');
 
-document.querySelector("#windchill").textContent = calculateWindChill(temperature, windSpeed);
+if ( temperature <= 10 && windSpeed > 4.8) {
+    windchill.textContent = calculateWindChill(temperature, windSpeed).toFixed(1) + " °C"
+} else {
+    windchill.textContent = "N/A";
+}
+
