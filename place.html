@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines | Country Page</title>
+    <meta name="description"
+      content="John Neal Caballero's WDD 131 Country Page Week 3 Philippines Data and Weather">
+    <meta name="author" content="John Neal Caballero">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Philippines</h1>
+    </header>
+
+    <main>
+        <img src="images/philippines-pic.webp" 
+        srcset="
+        images/philippines-small.webp 600w,
+        images/philippines-medium.webp 1000w,
+        images/philippines-pic.webp 1600w
+        "
+        sizes="100vw"
+        alt="A scenic view of the Philippines">
+        <section>
+            <h2>Data</h2>
+           <p><strong>Area:</strong> 300,000km²</p>
+           <p><strong>Population:</strong> About 117 million</p>
+           <p><strong>Capital:</strong> Manila</p>
+           <p><strong>Languages:</strong> Tagalog/Filipino and English</p>
+           <p><strong>Currency:</strong> Philippine peso (PHP)</p>
+           <p><strong>Time Zone:</strong> Philippine Standard Time(PST)</p>
+           <p><strong>Calling Code:</strong> +63</p>
+           <p><strong>Internet TLD:</strong> .ph</p>
+        </section>
+
+        <section>
+            <h2>Weather</h2>
+            <img src="images/weather-icon.svg" alt="weather icon for mobile">
+            <p><strong>Temperature:</strong> 30°C</p>
+            <p><strong>Conditions:</strong> Partly cloudy</p>
+            <p><strong>Wind:</strong> 10 km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+        </section>
+       
+
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> ⚔️John Neal Caballero | ⚔️ Laguna Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
