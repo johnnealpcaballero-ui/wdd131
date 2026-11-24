@@ -88,7 +88,7 @@ const temples = [
     dedicated: "2026, May, 31",
     area: 27895,
     imageUrl: 
-    "images/manila-philippines-temple.jpg"
+    "images/bacolod-philippines-temple.jpg"
   },
   {
     templeName: "Manila Philippines Temple",
@@ -96,7 +96,7 @@ const temples = [
     dedicated: "1984, September, 25-27",
     area: 26683,
     imageUrl:
-    "images/bacolod-philippines-temple.jpg"
+    "images/manila-philippines-temple.jpg"
   }
 ];
 
@@ -122,5 +122,35 @@ function displayTemples(templeList) {
 
 displayTemples(temples);
 
+document.querySelector("#home").addEventListener("click", function () {
+    displayTemples(temples);
+});
 
+document.querySelector("#old").addEventListener("click", function () {
+    const oldTemples = temples.filter(temple => {
+        return Number(temple.dedicated.split(",")[0]) < 1900;
+    });
+    displayTemples(oldTemples);
+});
+
+document.querySelector("#new").addEventListener("click", function () {
+    const newTemples = temples.filter(temple => {
+        return Number(temple.dedicated.split(",")[0]) > 2000;
+    });
+    displayTemples(newTemples);
+});
+
+document.querySelector("#large").addEventListener("click", function () {
+    const largeTemples = temples.filter(temple => {
+        return temple.area > 90000;
+    });
+    displayTemples(largeTemples);
+});
+
+document.querySelector("#small").addEventListener("click", function () {
+    const smallTemples = temples.filter(temple => {
+        return temple.area < 10000;
+    });
+    displayTemples(smallTemples);
+});
 
